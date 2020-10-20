@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
+    width: 315px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+header h1 {
+    font-size: 25px;
+}
+header span{
+    display: block;
+    font-weight: 200;
+}
+header p {
+    color: hsl(229, 6%, 66%);
+}
+#box-container {
+    height: 1025px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.box {
+    width: 100%;
+    height: 225px;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.23);
+}
+.box-1{
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+.box-2{
+    border-top:4px solid hsl(0, 78%, 62%);
+}
+.box-3{
+    border-top:4px solid hsl(34, 97%, 64%);
+}
+.box-4 {
+    border-top:4px solid hsl(212, 86%, 64%);
+}
+.box h2, .box p, .box img {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.box h2 {
+    font-size: 22px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.box p {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 36px;
+    color: hsl(229, 6%, 66%);
+}
+.box img {
+    height: 58px;
+    text-align: right;
+    float: right;
+}
+
+@media screen and (min-width: 650px){
+    body{
+        width: 650px;
+    }
+    header {
+        width: 500px;
+        margin: 90px auto 60px;
+    }
+    #box-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 540px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .box{
+        width: 300px;
+        height: 255px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    body{
+        width: 1170px;
+    }
+    #box-container {
+        max-width: 1170px;
+    }
+    .box {
+        width: 350px;
+    }
+    .box-1, .box-4 {
+        transform: translateY(50%);
+    }
+    .box-3 {
+        order: 1;
+    }
+}
